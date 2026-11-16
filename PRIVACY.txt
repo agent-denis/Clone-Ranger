@@ -1,0 +1,127 @@
+CLONE RANGER – PRIVACY STATEMENT
+================================
+
+Applies to: Clone Ranger 1.0.0 and later
+Last updated: 16 November 2026
+
+
+SUMMARY
+-------
+
+Clone Ranger runs entirely on your own computer. It does not connect to the
+internet, does not collect or send any data, has no user accounts, no
+advertising, no analytics and no tracking. Everything it stores stays on your
+computer, in your own home folder, and you can delete it at any time.
+
+
+1. WHO IS RESPONSIBLE
+---------------------
+
+Clone Ranger is free software, published under the GNU General Public License
+version 3 or later by its developer (GitHub: agent-denis). Because the program
+sends no data anywhere, the developer receives no information about you or
+about how you use it.
+
+Questions about this statement:
+https://github.com/agent-denis/clone-ranger/issues
+
+
+2. NO NETWORK CONNECTIONS
+-------------------------
+
+Clone Ranger contains no code that connects to the internet or to any other
+computer. In particular it does NOT:
+
+  - send usage statistics, crash reports or "telemetry",
+  - check for updates,
+  - upload, sync or back up your files or any information about them,
+  - show advertising or load anything from the web.
+
+The only link in the program is "Source code" in Help -> About. It opens the
+project's GitHub page in your web browser, and only when you click it. What
+happens on that website is covered by GitHub's own privacy statement.
+
+You can check all of this yourself: the complete source code is public.
+
+
+3. WHAT THE PROGRAM READS
+-------------------------
+
+To find duplicates, Clone Ranger reads files in the folders you choose to scan
+(by default your home folder and external drives). For each photo or video it
+reads:
+
+  - the file name, folder, size and dates,
+  - the file's content, to compute a fingerprint (hash) that identifies
+    identical copies,
+  - picture details such as resolution and the "date taken" stored in the
+    photo (EXIF), and for videos the duration and resolution.
+
+From the EXIF information it uses only the date taken and the orientation
+(to show pictures the right way up). It does not use or store anything else,
+such as GPS location or camera serial numbers, and it never changes your
+photos or videos unless you confirm an action such as Move to Trash, Delete,
+Move or Rename.
+
+For videos, Clone Ranger runs the program "ffprobe"/"ffmpeg" (part of FFmpeg)
+on your computer to read the duration and make a thumbnail. This happens
+locally; FFmpeg does not send anything either.
+
+
+4. WHAT THE PROGRAM STORES, AND WHERE
+-------------------------------------
+
+Everything is stored only in your own home folder:
+
+  ~/.config/clone-ranger/settings.json
+      Your settings: theme, scan locations, excluded, preferred and protected
+      folders, keep rules, window layout, and the last folders you scanned or
+      moved files to.
+
+  ~/.cache/clone-ranger/            (the "cache")
+      - index.sqlite: the list of media files found in the last scans, with
+        their paths, sizes, dates, fingerprints, resolution, duration and date
+        taken.
+      - thumbs/: small preview pictures of your photos and videos. Note that
+        these previews show what your photos look like.
+
+  ~/.local/state/clone-ranger/      (the "history")
+      - journal.jsonl: a record of every action you confirmed (for example
+        "moved these 12 files to the Trash"), with file paths, the time and your
+        user name, so that actions can be undone.
+      - clone-ranger.log: technical messages for troubleshooting, which may
+        contain file paths.
+
+Files you move to the Trash go to the normal system Trash, where you can
+restore or empty them from your file manager.
+
+Nothing is shared with other users of the computer beyond what the normal
+file permissions of your home folder allow.
+
+
+5. HOW TO DELETE YOUR DATA
+--------------------------
+
+  - In the program: File -> "Clear history & cache..." deletes the history,
+    the log, the scan index and all thumbnails. "Reset to defaults..." resets
+    your settings. Both are also in Settings -> History & cache.
+  - When uninstalling: "./uninstall.sh --purge" (installer version) removes
+    the three folders listed above. With the RPM package, remove the program
+    with "sudo dnf remove clone-ranger" and delete the three folders yourself.
+  - You can also simply delete the three folders at any time; Clone Ranger
+    creates new, empty ones the next time it starts.
+
+
+6. CHILDREN
+-----------
+
+Clone Ranger collects no personal information from anyone, including
+children.
+
+
+7. CHANGES TO THIS STATEMENT
+----------------------------
+
+If a future version changes how data is handled, this statement will be
+updated and the change will be listed in CHANGELOG.md. The current version is
+always in the source code: PRIVACY.txt.
