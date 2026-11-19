@@ -1,0 +1,131 @@
+CLONE RANGER FOR WINDOWS 10 / 11
+From the zip file to an installed app, step by step
+====================================================
+
+You start with:   clone-ranger-1.1.0-windows-src.zip
+You end up with:  Clone Ranger installed on your PC
+
+What you need:
+  - a Windows 10 or Windows 11 PC
+  - an internet connection
+  - about 2 GB of free disk space
+  - about 30 minutes (mostly waiting)
+
+No programming knowledge is needed. You only click and wait.
+
+
+PART 1: UNZIP THE FILE
+----------------------
+
+1. Copy  clone-ranger-1.1.0-windows-src.zip  to your PC,
+   for example to your Desktop or to the C: drive.
+
+2. Right-click the zip file and choose  "Extract All..."
+
+3. Click  "Extract".
+   A new, normal folder called  clone-ranger-1.1.0-windows-src  appears
+   (with a folder  clone-ranger  inside it).
+
+   IMPORTANT: always work in this new folder, not inside the zip.
+   If you just double-click the zip, Windows only shows a preview,
+   and the next steps will not work.
+
+
+PART 2: MAKE THE INSTALLER (.exe)
+---------------------------------
+
+4. Open the extracted folder, then the folder  clone-ranger ,
+   then the folder  windows .
+
+5. Double-click the file  build-no-tests.bat
+   (Windows may show it as just "build-no-tests").
+
+   - Use a NORMAL double-click.
+     Do NOT choose "Run as administrator".
+
+   - If a blue box says "Windows protected your PC":
+     click  "More info", then  "Run anyway".
+
+   - If Windows asks "Do you want to allow this app to make changes
+     to your device?": click  "Yes".
+     (The build is installing two free helper programs it needs:
+     Python and Inno Setup.)
+
+6. A black window opens and lots of text scrolls past.
+   This is normal. Do not close the window. Just wait.
+
+   The first time this takes about 5 to 15 minutes, because
+   everything needed is downloaded from the internet.
+
+7. When the window shows the word  "Done" , press any key.
+   The window closes.
+
+8. Go back to the  clone-ranger  folder. There is now a new folder
+   called  dist-windows . Open it. Inside you will find:
+
+     CloneRanger-1.1.0-Setup.exe      <-- this is your installer
+
+   You can copy this one file to a USB stick and install Clone Ranger
+   on any other Windows 10 / 11 PC too. You don't need to repeat
+   Part 1 and Part 2 on those PCs.
+
+
+PART 3: INSTALL CLONE RANGER
+----------------------------
+
+9. Double-click  CloneRanger-1.1.0-Setup.exe
+
+10. Windows will probably show a blue box:
+    "Windows protected your PC".
+    This happens because Clone Ranger is a free app from a private
+    person, not from a big company. It is safe.
+    Click  "More info", then  "Run anyway".
+
+    You do NOT need an administrator password.
+
+11. The installer opens. Click through it:
+      - Licence page:   choose "I accept the agreement", click Next
+      - Folder page:    leave it as it is, click Next
+      - Desktop icon:   tick the box if you want an icon on your
+                        desktop, click Next
+      - Click  Install
+      - Click  Finish   (Clone Ranger starts right away)
+
+12. From now on, start Clone Ranger from the Start menu:
+    click Start and type  Clone Ranger .
+
+You can delete the zip and the extracted folder now, if you like.
+Keep the Setup.exe if you want to install it on other PCs later.
+
+
+IF SOMETHING GOES WRONG
+-----------------------
+
+The black window shows "FAILED" in red:
+  - Usually the internet connection dropped. Double-click
+    build-no-tests.bat again. It continues where it stopped.
+  - "could not download FFmpeg": that website is busy.
+    Wait an hour and try again.
+  - Anything else: take a photo of the black window with your phone
+    (or press the Windows key + Shift + S for a screenshot) and send
+    it to whoever gave you Clone Ranger.
+
+The black window shows an error straight away (for example that it
+cannot find "build.ps1"):
+  - You are probably still inside the zip. Go back to Part 1
+    and use "Extract All".
+
+There is no Setup.exe in dist-windows:
+  - The build did not finish. Run build-no-tests.bat again and
+    look for "FAILED" in the text.
+  - If you only see  CloneRanger-1.1.0-portable.zip : that works too.
+    Unzip it (Extract All) and double-click  "Clone Ranger.exe".
+    No installing needed.
+
+
+TO REMOVE CLONE RANGER LATER
+----------------------------
+
+Start -> Settings -> Apps -> Installed apps -> Clone Ranger ->
+the three dots (...) -> Uninstall.
+Your photos and videos are never deleted.
