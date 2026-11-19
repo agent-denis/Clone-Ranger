@@ -1,0 +1,139 @@
+﻿CLONE RANGER, SKIRTA WINDOWS 10 / 11
+Nuo zip failo iki įdiegtos programos, žingsnis po žingsnio
+=========================================================
+
+Pradedate nuo:    clone-ranger-1.1.0-windows-src.zip
+Pabaigoje turite: Clone Ranger, įdiegtą kompiuteryje
+
+Ko reikia:
+  - kompiuterio su Windows 10 arba Windows 11
+  - interneto ryšio
+  - apie 2 GB laisvos vietos diske
+  - apie 30 minučių (daugiausia laukimo)
+
+Mokėti programuoti nereikia. Jūs tik spustelite ir laukiate.
+
+Pastaba: kūrimo langas ir diegimo programa yra anglų kalba.
+Angliški žodžiai, kuriuos matysite ekrane, čia parašyti
+kabutėse, pvz., "Done".
+
+
+1 DALIS: IŠSKLEISKITE FAILĄ
+---------------------------
+
+1. Nukopijuokite  clone-ranger-1.1.0-windows-src.zip  į kompiuterį,
+   pavyzdžiui, į darbalaukį arba į diską C:.
+
+2. Dešiniuoju pelės mygtuku spustelėkite zip failą ir pasirinkite
+   "Išskleisti viską..." (angliškoje Windows: "Extract All...").
+
+3. Spustelėkite  "Išskleisti" ("Extract").
+   Atsiras naujas, įprastas aplankas  clone-ranger-1.1.0-windows-src
+   (jame yra aplankas  clone-ranger ).
+
+   SVARBU: visada dirbkite šiame naujame aplanke, o ne zip failo viduje.
+   Jei zip failą tiesiog dukart spustelėsite, Windows rodys tik
+   peržiūrą ir tolesni žingsniai neveiks.
+
+
+2 DALIS: SUKURKITE DIEGIMO PROGRAMĄ (.exe)
+------------------------------------------
+
+4. Atidarykite išskleistą aplanką, tada aplanką  clone-ranger ,
+   tada aplanką  windows .
+
+5. Dukart spustelėkite failą  build-no-tests.bat
+   (Windows gali jį rodyti tiesiog kaip "build-no-tests").
+
+   - Naudokite ĮPRASTĄ dvigubą spustelėjimą.
+     NESIRINKITE "Vykdyti kaip administratoriui".
+
+   - Jei pasirodo mėlynas langas "Windows apsaugojo jūsų kompiuterį"
+     ("Windows protected your PC"): spustelėkite
+     "Daugiau informacijos" ("More info"), tada
+     "Vis tiek vykdyti" ("Run anyway").
+
+   - Jei Windows klausia "Ar norite leisti šiai programai atlikti
+     pakeitimus jūsų įrenginyje?": spustelėkite  "Taip".
+     (Kūrimas įdiegia dvi nemokamas pagalbines programas, kurių
+     jam reikia: Python ir Inno Setup.)
+
+6. Atsidaro juodas langas, kuriame slenka daug teksto.
+   Tai normalu. Neuždarykite lango. Tiesiog laukite.
+
+   Pirmą kartą tai trunka apie 5-15 minučių, nes viskas, ko reikia,
+   atsisiunčiama iš interneto.
+
+7. Kai lange pasirodo žodis  "Done"  (baigta), paspauskite bet kurį
+   klavišą. Langas užsidarys.
+
+8. Grįžkite į aplanką  clone-ranger . Dabar jame yra naujas aplankas
+   dist-windows . Atidarykite jį. Viduje rasite:
+
+     CloneRanger-1.1.0-Setup.exe      <-- tai jūsų diegimo programa
+
+   Šį vieną failą galite nukopijuoti į USB atmintuką ir įdiegti
+   Clone Ranger bet kuriame kitame kompiuteryje su Windows 10 / 11.
+   Tuose kompiuteriuose 1 ir 2 dalių kartoti nereikia.
+
+
+3 DALIS: ĮDIEKITE CLONE RANGER
+------------------------------
+
+9. Dukart spustelėkite  CloneRanger-1.1.0-Setup.exe
+
+10. Windows greičiausiai parodys mėlyną langą
+    "Windows apsaugojo jūsų kompiuterį".
+    Taip nutinka todėl, kad Clone Ranger yra nemokama privataus
+    asmens programa, o ne didelės bendrovės. Ji saugi.
+    Spustelėkite  "Daugiau informacijos", tada  "Vis tiek vykdyti".
+
+    Administratoriaus slaptažodžio NEREIKIA.
+
+11. Atsidaro diegimo programa (anglų kalba). Pereikite ją:
+      - Licencijos puslapis: pasirinkite "I accept the agreement"
+                             (sutinku), spustelėkite "Next" (toliau)
+      - Aplanko puslapis:    nieko nekeiskite, spustelėkite "Next"
+      - Darbalaukio piktograma: pažymėkite langelį, jei norite
+                             piktogramos darbalaukyje, spustelėkite "Next"
+      - Spustelėkite  "Install"  (įdiegti)
+      - Spustelėkite  "Finish"   (baigti) - Clone Ranger iškart paleidžiama
+
+12. Toliau Clone Ranger paleiskite iš meniu Pradžia (Start):
+    spustelėkite Pradžia ir įveskite  Clone Ranger .
+
+Jei norite, dabar galite ištrinti zip failą ir išskleistą aplanką.
+Pasilikite Setup.exe, jei vėliau norėsite įdiegti programą
+kituose kompiuteriuose.
+
+
+JEI KAS NORS NEPAVYKSTA
+-----------------------
+
+Juodame lange raudonai rodoma "FAILED" (nepavyko):
+  - Dažniausiai nutrūko interneto ryšys. Vėl dukart spustelėkite
+    build-no-tests.bat. Jis tęs nuo ten, kur sustojo.
+  - "could not download FFmpeg": ta svetainė perkrauta.
+    Palaukite valandą ir bandykite dar kartą.
+  - Kas nors kita: nufotografuokite juodą langą telefonu
+    (arba paspauskite Windows klavišą + Shift + S ekrano kopijai)
+    ir nusiųskite tai žmogui, kuris jums davė Clone Ranger.
+
+Juodas langas iškart rodo klaidą (pvz., kad neranda "build.ps1"):
+  - Greičiausiai vis dar esate zip failo viduje. Grįžkite į 1 dalį
+    ir naudokite "Išskleisti viską".
+
+Aplanke dist-windows nėra Setup.exe:
+  - Kūrimas nebaigtas. Vėl paleiskite build-no-tests.bat ir
+    ieškokite tekste "FAILED".
+  - Jei matote tik  CloneRanger-1.1.0-portable.zip : tai irgi tinka.
+    Išskleiskite jį ("Išskleisti viską") ir dukart spustelėkite
+    "Clone Ranger.exe". Diegti nereikia.
+
+
+KAIP VĖLIAU PAŠALINTI CLONE RANGER
+----------------------------------
+
+Pradžia -> Parametrai -> Programos -> Įdiegtos programos ->
+Clone Ranger -> trys taškai (...) -> Pašalinti.
+Jūsų nuotraukos ir vaizdo įrašai niekada neištrinami.

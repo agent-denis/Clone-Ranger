@@ -1,0 +1,137 @@
+﻿CLONE RANGER ZA WINDOWS 10 / 11
+Od datoteke zip do nameščene aplikacije, korak za korakom
+========================================================
+
+Začnete z:        clone-ranger-1.1.0-windows-src.zip
+Na koncu imate:   Clone Ranger nameščen na računalniku
+
+Kaj potrebujete:
+  - računalnik z Windows 10 ali Windows 11
+  - internetno povezavo
+  - približno 2 GB prostega prostora na disku
+  - približno 30 minut (večinoma čakanja)
+
+Programiranja vam ni treba znati. Samo klikate in čakate.
+
+Opomba: okno za izdelavo in namestitveni program sta v angleščini.
+Angleške besede, ki jih boste videli na zaslonu, so tukaj zapisane
+v narekovajih, npr. "Done".
+
+
+1. DEL: RAZŠIRITE DATOTEKO
+--------------------------
+
+1. Kopirajte  clone-ranger-1.1.0-windows-src.zip  na računalnik,
+   npr. na namizje ali na pogon C:.
+
+2. Z desno tipko miške kliknite datoteko zip in izberite
+   "Razširi vse ..." (v angleškem Windows: "Extract All...").
+
+3. Kliknite  "Razširi" ("Extract").
+   Prikaže se nova, običajna mapa  clone-ranger-1.1.0-windows-src
+   (v njej je mapa  clone-ranger ).
+
+   POMEMBNO: vedno delajte v tej novi mapi, ne znotraj datoteke zip.
+   Če zip samo dvakrat kliknete, Windows prikaže le predogled
+   in naslednji koraki ne bodo delovali.
+
+
+2. DEL: IZDELAJTE NAMESTITVENI PROGRAM (.exe)
+---------------------------------------------
+
+4. Odprite razširjeno mapo, nato mapo  clone-ranger ,
+   nato mapo  windows .
+
+5. Dvakrat kliknite datoteko  build-no-tests.bat
+   (Windows jo morda prikaže samo kot "build-no-tests").
+
+   - Uporabite OBIČAJEN dvojni klik.
+     NE izberite "Zaženi kot skrbnik".
+
+   - Če se prikaže modro okno "Windows je zaščitil vaš računalnik"
+     ("Windows protected your PC"): kliknite  "Več informacij"
+     ("More info"), nato  "Vseeno zaženi" ("Run anyway").
+
+   - Če Windows vpraša "Ali želite tej aplikaciji dovoliti, da
+     spreminja vašo napravo?": kliknite  "Da".
+     (Izdelava namešča dva brezplačna pomožna programa, ki ju
+     potrebuje: Python in Inno Setup.)
+
+6. Odpre se črno okno, v katerem se izpisuje veliko besedila.
+   To je normalno. Okna ne zaprite. Samo počakajte.
+
+   Prvič to traja približno 5 do 15 minut, ker se vse potrebno
+   prenese z interneta.
+
+7. Ko okno prikaže besedo  "Done"  (končano), pritisnite katero koli
+   tipko. Okno se zapre.
+
+8. Vrnite se v mapo  clone-ranger . V njej je zdaj nova mapa
+   dist-windows . Odprite jo. V njej boste našli:
+
+     CloneRanger-1.1.0-Setup.exe      <-- to je vaš namestitveni program
+
+   To eno datoteko lahko kopirate na ključek USB in namestite
+   Clone Ranger tudi na kateri koli drug računalnik z Windows 10 / 11.
+   Na teh računalnikih vam 1. in 2. dela ni treba ponavljati.
+
+
+3. DEL: NAMESTITE CLONE RANGER
+------------------------------
+
+9. Dvakrat kliknite  CloneRanger-1.1.0-Setup.exe
+
+10. Windows bo verjetno prikazal modro okno
+    "Windows je zaščitil vaš računalnik".
+    To se zgodi, ker je Clone Ranger brezplačna aplikacija zasebne
+    osebe, ne velikega podjetja. Je varna.
+    Kliknite  "Več informacij", nato  "Vseeno zaženi".
+
+    Skrbniškega gesla NE potrebujete.
+
+11. Odpre se namestitveni program (v angleščini). Pojdite skozenj:
+      - Stran z licenco:   izberite "I accept the agreement"
+                           (sprejemam), kliknite "Next" (naprej)
+      - Stran z mapo:      ničesar ne spreminjajte, kliknite "Next"
+      - Ikona na namizju:  označite polje, če želite ikono na
+                           namizju, kliknite "Next"
+      - Kliknite  "Install"  (namesti)
+      - Kliknite  "Finish"   (dokončaj) - Clone Ranger se takoj zažene
+
+12. Odslej Clone Ranger zaženete iz menija Start:
+    kliknite Start in vpišite  Clone Ranger .
+
+Datoteko zip in razširjeno mapo lahko zdaj izbrišete, če želite.
+Shranite Setup.exe, če ga želite pozneje namestiti na druge računalnike.
+
+
+ČE GRE KAJ NAROBE
+-----------------
+
+Črno okno z rdečo prikaže "FAILED" (ni uspelo):
+  - Navadno se je prekinila internetna povezava. Znova dvakrat
+    kliknite build-no-tests.bat. Nadaljeval bo, kjer se je ustavil.
+  - "could not download FFmpeg": ta spletna stran je preobremenjena.
+    Počakajte eno uro in poskusite znova.
+  - Kar koli drugega: fotografirajte črno okno s telefonom
+    (ali pritisnite tipko Windows + Shift + S za posnetek zaslona)
+    in ga pošljite osebi, ki vam je dala Clone Ranger.
+
+Črno okno takoj prikaže napako (npr. da ne najde "build.ps1"):
+  - Verjetno ste še vedno znotraj datoteke zip. Vrnite se na 1. del
+    in uporabite "Razširi vse".
+
+V mapi dist-windows ni datoteke Setup.exe:
+  - Izdelava se ni končala. Znova zaženite build-no-tests.bat in
+    v besedilu poiščite "FAILED".
+  - Če vidite samo  CloneRanger-1.1.0-portable.zip : tudi to deluje.
+    Razširite ga ("Razširi vse") in dvakrat kliknite
+    "Clone Ranger.exe". Namestitev ni potrebna.
+
+
+KAKO POZNEJE ODSTRANITE CLONE RANGER
+------------------------------------
+
+Start -> Nastavitve -> Aplikacije -> Nameščene aplikacije ->
+Clone Ranger -> tri pike (...) -> Odstrani.
+Vaše fotografije in videoposnetki se nikoli ne izbrišejo.

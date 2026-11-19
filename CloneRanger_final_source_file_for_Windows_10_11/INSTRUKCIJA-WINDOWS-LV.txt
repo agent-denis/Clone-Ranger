@@ -1,0 +1,141 @@
+﻿CLONE RANGER OPERĒTĀJSISTĒMAI WINDOWS 10 / 11
+No zip faila līdz instalētai lietotnei, soli pa solim
+====================================================
+
+Jūs sākat ar:     clone-ranger-1.1.0-windows-src.zip
+Beigās jums ir:   Clone Ranger instalēta datorā
+
+Kas nepieciešams:
+  - dators ar Windows 10 vai Windows 11
+  - interneta savienojums
+  - apmēram 2 GB brīvas vietas diskā
+  - apmēram 30 minūtes (galvenokārt gaidīšana)
+
+Programmēt prast nav nepieciešams. Jūs tikai klikšķināt un gaidāt.
+
+Piezīme: būvēšanas logs un instalēšanas programma ir angļu valodā.
+Angļu vārdi, ko redzēsiet ekrānā, šeit ir rakstīti pēdiņās,
+piem., "Done".
+
+
+1. DAĻA: ATARHIVĒJIET FAILU
+---------------------------
+
+1. Nokopējiet  clone-ranger-1.1.0-windows-src.zip  datorā,
+   piemēram, uz darbvirsmas vai diskā C:.
+
+2. Ar peles labo pogu noklikšķiniet uz zip faila un izvēlieties
+   "Izvilkt visu..." (angļu valodas Windows: "Extract All...").
+
+3. Noklikšķiniet uz  "Izvilkt" ("Extract").
+   Parādās jauna, parasta mape  clone-ranger-1.1.0-windows-src
+   (tajā ir mape  clone-ranger ).
+
+   SVARĪGI: vienmēr strādājiet šajā jaunajā mapē, nevis zip faila iekšpusē.
+   Ja zip failu vienkārši atverat ar dubultklikšķi, Windows rāda
+   tikai priekšskatījumu, un nākamie soļi nedarbosies.
+
+
+2. DAĻA: IZVEIDOJIET INSTALĒŠANAS PROGRAMMU (.exe)
+--------------------------------------------------
+
+4. Atveriet atarhivēto mapi, tad mapi  clone-ranger ,
+   tad mapi  windows .
+
+5. Veiciet dubultklikšķi uz faila  build-no-tests.bat
+   (Windows to var rādīt vienkārši kā "build-no-tests").
+
+   - Izmantojiet PARASTU dubultklikšķi.
+     NEIZVĒLIETIES "Palaist kā administratoram".
+
+   - Ja parādās zils logs "Windows aizsargāja jūsu datoru"
+     ("Windows protected your PC"): noklikšķiniet uz
+     "Vairāk informācijas" ("More info"), tad uz
+     "Tik un tā palaist" ("Run anyway").
+
+   - Ja Windows jautā "Vai vēlaties ļaut šai programmai veikt
+     izmaiņas jūsu ierīcē?": noklikšķiniet uz  "Jā".
+     (Būvēšana instalē divas bezmaksas palīgprogrammas, kas tai
+     vajadzīgas: Python un Inno Setup.)
+
+6. Atveras melns logs, kurā ritina daudz teksta.
+   Tas ir normāli. Neaizveriet logu. Vienkārši gaidiet.
+
+   Pirmajā reizē tas ilgst apmēram 5 līdz 15 minūtes, jo viss
+   nepieciešamais tiek lejupielādēts no interneta.
+
+7. Kad logā parādās vārds  "Done"  (gatavs), nospiediet jebkuru
+   taustiņu. Logs aizveras.
+
+8. Atgriezieties mapē  clone-ranger . Tagad tajā ir jauna mape
+   dist-windows . Atveriet to. Tajā atradīsiet:
+
+     CloneRanger-1.1.0-Setup.exe      <-- šī ir jūsu instalēšanas programma
+
+   Šo vienu failu varat nokopēt USB zibatmiņā un instalēt
+   Clone Ranger arī jebkurā citā datorā ar Windows 10 / 11.
+   Tajos datoros 1. un 2. daļa nav jāatkārto.
+
+
+3. DAĻA: INSTALĒJIET CLONE RANGER
+---------------------------------
+
+9. Veiciet dubultklikšķi uz  CloneRanger-1.1.0-Setup.exe
+
+10. Windows, visticamāk, parādīs zilu logu
+    "Windows aizsargāja jūsu datoru".
+    Tas notiek tāpēc, ka Clone Ranger ir privātpersonas bezmaksas
+    lietotne, nevis lielas kompānijas. Tā ir droša.
+    Noklikšķiniet uz  "Vairāk informācijas", tad uz
+    "Tik un tā palaist".
+
+    Administratora parole NAV nepieciešama.
+
+11. Atveras instalēšanas programma (angļu valodā). Izejiet tai cauri:
+      - Licences lapa:     izvēlieties "I accept the agreement"
+                           (piekrītu), noklikšķiniet "Next" (tālāk)
+      - Mapes lapa:        neko nemainiet, noklikšķiniet "Next"
+      - Darbvirsmas ikona: atzīmējiet rūtiņu, ja vēlaties ikonu
+                           uz darbvirsmas, noklikšķiniet "Next"
+      - Noklikšķiniet  "Install"  (instalēt)
+      - Noklikšķiniet  "Finish"   (pabeigt) - Clone Ranger uzreiz startē
+
+12. Turpmāk startējiet Clone Ranger no izvēlnes Sākt (Start):
+    noklikšķiniet uz Sākt un ierakstiet  Clone Ranger .
+
+Ja vēlaties, zip failu un atarhivēto mapi tagad varat izdzēst.
+Saglabājiet Setup.exe, ja vēlāk gribat instalēt to citos datoros.
+
+
+JA KAUT KAS NOIET GREIZI
+------------------------
+
+Melnais logs sarkanā krāsā rāda "FAILED" (neizdevās):
+  - Parasti ir pārtrūcis interneta savienojums. Vēlreiz veiciet
+    dubultklikšķi uz build-no-tests.bat. Tas turpinās no vietas,
+    kur apstājās.
+  - "could not download FFmpeg": šī vietne ir pārslogota.
+    Pagaidiet stundu un mēģiniet vēlreiz.
+  - Kaut kas cits: nofotografējiet melno logu ar tālruni
+    (vai nospiediet Windows taustiņu + Shift + S, lai uzņemtu
+    ekrānuzņēmumu) un nosūtiet to personai, kas jums iedeva
+    Clone Ranger.
+
+Melnais logs uzreiz rāda kļūdu (piem., ka nevar atrast "build.ps1"):
+  - Visticamāk, jūs joprojām esat zip faila iekšpusē. Atgriezieties
+    pie 1. daļas un izmantojiet "Izvilkt visu".
+
+Mapē dist-windows nav faila Setup.exe:
+  - Būvēšana netika pabeigta. Vēlreiz palaidiet build-no-tests.bat un
+    meklējiet tekstā "FAILED".
+  - Ja redzat tikai  CloneRanger-1.1.0-portable.zip : arī tas der.
+    Atarhivējiet to ("Izvilkt visu") un veiciet dubultklikšķi uz
+    "Clone Ranger.exe". Instalēšana nav vajadzīga.
+
+
+KĀ VĒLĀK NOŅEMT CLONE RANGER
+----------------------------
+
+Sākt -> Iestatījumi -> Programmas -> Instalētās programmas ->
+Clone Ranger -> trīs punkti (...) -> Atinstalēt.
+Jūsu fotoattēli un video nekad netiek dzēsti.

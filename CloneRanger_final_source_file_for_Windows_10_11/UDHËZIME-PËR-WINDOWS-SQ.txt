@@ -1,0 +1,139 @@
+﻿CLONE RANGER PËR WINDOWS 10 / 11
+Nga skedari zip te aplikacioni i instaluar, hap pas hapi
+=======================================================
+
+Fillon me:        clone-ranger-1.1.0-windows-src.zip
+Në fund ke:       Clone Ranger të instaluar në kompjuter
+
+Çfarë të duhet:
+  - një kompjuter me Windows 10 ose Windows 11
+  - lidhje interneti
+  - rreth 2 GB hapësirë të lirë në disk
+  - rreth 30 minuta (kryesisht pritje)
+
+Nuk të duhen njohuri programimi. Vetëm klikon dhe pret.
+
+Shënim: dritarja e ndërtimit dhe programi i instalimit janë në anglisht.
+Fjalët angleze që do të shohësh në ekran janë shkruar këtu
+në thonjëza, p.sh. "Done".
+
+
+PJESA 1: HAPE (ZBERTHE) SKEDARIN ZIP
+------------------------------------
+
+1. Kopjo  clone-ranger-1.1.0-windows-src.zip  në kompjuter,
+   p.sh. në desktop ose në diskun C:.
+
+2. Kliko me butonin e djathtë mbi skedarin zip dhe zgjidh
+   "Ekstrakto të gjitha..." (në Windows në anglisht: "Extract All...").
+
+3. Kliko  "Ekstrakto" ("Extract").
+   Shfaqet një dosje e re, e zakonshme  clone-ranger-1.1.0-windows-src
+   (me dosjen  clone-ranger  brenda saj).
+
+   E RËNDËSISHME: puno gjithmonë në këtë dosje të re, jo brenda zip-it.
+   Nëse vetëm klikon dy herë mbi zip-in, Windows tregon vetëm një
+   pamje paraprake dhe hapat e mëposhtëm nuk do të funksionojnë.
+
+
+PJESA 2: KRIJO PROGRAMIN E INSTALIMIT (.exe)
+--------------------------------------------
+
+4. Hap dosjen e ekstraktuar, pastaj dosjen  clone-ranger ,
+   pastaj dosjen  windows .
+
+5. Kliko dy herë mbi skedarin  build-no-tests.bat
+   (Windows mund ta tregojë vetëm si "build-no-tests").
+
+   - Përdor një klikim të dyfishtë të ZAKONSHËM.
+     MOS zgjidh "Ekzekuto si administrator" ("Run as administrator").
+
+   - Nëse shfaqet një kuti blu "Windows e mbrojti PC-në tënde"
+     ("Windows protected your PC"): kliko  "Më shumë informacion"
+     ("More info"), pastaj  "Ekzekuto gjithsesi" ("Run anyway").
+
+   - Nëse Windows pyet "Dëshiron ta lejosh këtë aplikacion të bëjë
+     ndryshime në pajisjen tënde?": kliko  "Po" ("Yes").
+     (Ndërtimi po instalon dy programe ndihmëse falas që i duhen:
+     Python dhe Inno Setup.)
+
+6. Hapet një dritare e zezë ku kalon shumë tekst.
+   Kjo është normale. Mos e mbyll dritaren. Thjesht prit.
+
+   Herën e parë kjo zgjat rreth 5 deri në 15 minuta, sepse gjithçka
+   që nevojitet shkarkohet nga interneti.
+
+7. Kur dritarja tregon fjalën  "Done"  (përfundoi), shtyp çfarëdo
+   tasti. Dritarja mbyllet.
+
+8. Kthehu te dosja  clone-ranger . Tani aty ka një dosje të re
+   me emrin  dist-windows . Hape. Brenda do të gjesh:
+
+     CloneRanger-1.1.0-Setup.exe      <-- ky është programi yt i instalimit
+
+   Këtë skedar të vetëm mund ta kopjosh në një USB dhe ta instalosh
+   Clone Ranger në çdo kompjuter tjetër me Windows 10 / 11.
+   Në ata kompjuterë nuk ke nevojë të përsëritësh Pjesën 1 dhe 2.
+
+
+PJESA 3: INSTALO CLONE RANGER
+-----------------------------
+
+9. Kliko dy herë mbi  CloneRanger-1.1.0-Setup.exe
+
+10. Windows ka të ngjarë të tregojë një kuti blu
+    "Windows e mbrojti PC-në tënde".
+    Kjo ndodh sepse Clone Ranger është një aplikacion falas nga një
+    person privat, jo nga një kompani e madhe. Është i sigurt.
+    Kliko  "Më shumë informacion", pastaj  "Ekzekuto gjithsesi".
+
+    NUK të duhet fjalëkalimi i administratorit.
+
+11. Hapet programi i instalimit (në anglisht). Kalo nëpër të:
+      - Faqja e licencës:  zgjidh "I accept the agreement"
+                           (pranoj), kliko "Next" (tjetër)
+      - Faqja e dosjes:    mos ndrysho asgjë, kliko "Next"
+      - Ikona në desktop:  shëno kutinë nëse do një ikonë
+                           në desktop, kliko "Next"
+      - Kliko  "Install"  (instalo)
+      - Kliko  "Finish"   (përfundo) - Clone Ranger niset menjëherë
+
+12. Tani e tutje, nise Clone Ranger nga menyja Start:
+    kliko Start dhe shkruaj  Clone Ranger .
+
+Tani mund ta fshish zip-in dhe dosjen e ekstraktuar, nëse do.
+Ruaje Setup.exe nëse do ta instalosh më vonë në kompjuterë të tjerë.
+
+
+NËSE DIÇKA NUK SHKON
+--------------------
+
+Dritarja e zezë tregon "FAILED" (dështoi) me të kuqe:
+  - Zakonisht është ndërprerë lidhja e internetit. Kliko sërish
+    dy herë mbi build-no-tests.bat. Vazhdon aty ku ndaloi.
+  - "could not download FFmpeg": ajo faqe interneti është e ngarkuar.
+    Prit një orë dhe provo përsëri.
+  - Çdo gjë tjetër: bëji një foto dritares së zezë me telefon
+    (ose shtyp tastin Windows + Shift + S për një pamje ekrani) dhe
+    dërgoja personit që të dha Clone Ranger.
+
+Dritarja e zezë tregon menjëherë një gabim (p.sh. që nuk e gjen
+"build.ps1"):
+  - Ka të ngjarë që je ende brenda zip-it. Kthehu te Pjesa 1
+    dhe përdor "Ekstrakto të gjitha".
+
+Nuk ka Setup.exe në dist-windows:
+  - Ndërtimi nuk përfundoi. Nise sërish build-no-tests.bat dhe
+    kërko "FAILED" në tekst.
+  - Nëse sheh vetëm  CloneRanger-1.1.0-portable.zip : edhe ai punon.
+    Ekstraktoje ("Ekstrakto të gjitha") dhe kliko dy herë mbi
+    "Clone Ranger.exe". Nuk ka nevojë për instalim.
+
+
+SI TA HEQËSH CLONE RANGER MË VONË
+---------------------------------
+
+Start -> Cilësimet (Settings) -> Aplikacionet (Apps) ->
+Aplikacionet e instaluara (Installed apps) -> Clone Ranger ->
+tre pikat (...) -> Çinstalo (Uninstall).
+Fotot dhe videot e tua nuk fshihen kurrë.

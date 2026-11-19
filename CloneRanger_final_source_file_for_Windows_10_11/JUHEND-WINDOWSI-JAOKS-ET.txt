@@ -1,0 +1,138 @@
+﻿CLONE RANGER WINDOWS 10 / 11 JAOKS
+Zip-failist installitud rakenduseni, samm-sammult
+=================================================
+
+Alguses on teil:  clone-ranger-1.1.0-windows-src.zip
+Lõpuks on teil:   Clone Ranger arvutisse installitud
+
+Mida on vaja:
+  - Windows 10 või Windows 11 arvutit
+  - internetiühendust
+  - umbes 2 GB vaba kettaruumi
+  - umbes 30 minutit (enamasti ootamist)
+
+Programmeerimisoskust pole vaja. Te ainult klõpsate ja ootate.
+
+Märkus: ehitamise aken ja installiprogramm on inglise keeles.
+Ingliskeelsed sõnad, mida ekraanil näete, on siin kirjutatud
+jutumärkides, nt "Done".
+
+
+1. OSA: PAKKIGE FAIL LAHTI
+--------------------------
+
+1. Kopeerige  clone-ranger-1.1.0-windows-src.zip  arvutisse,
+   näiteks töölauale või kettale C:.
+
+2. Paremklõpsake zip-faili ja valige
+   "Ekstrakti kõik..." (ingliskeelses Windowsis: "Extract All...").
+
+3. Klõpsake  "Ekstrakti" ("Extract").
+   Ilmub uus tavaline kaust  clone-ranger-1.1.0-windows-src
+   (selle sees on kaust  clone-ranger ).
+
+   OLULINE: töötage alati selles uues kaustas, mitte zip-faili sees.
+   Kui zip-faili lihtsalt topeltklõpsate, näitab Windows ainult
+   eelvaadet ja järgmised sammud ei tööta.
+
+
+2. OSA: LOOGE INSTALLIPROGRAMM (.exe)
+-------------------------------------
+
+4. Avage lahtipakitud kaust, seejärel kaust  clone-ranger
+   ja seejärel kaust  windows .
+
+5. Topeltklõpsake faili  build-no-tests.bat
+   (Windows võib seda näidata lihtsalt kui "build-no-tests").
+
+   - Kasutage TAVALIST topeltklõpsu.
+     ÄRGE valige "Käivita administraatorina".
+
+   - Kui ilmub sinine aken "Windows kaitses teie arvutit"
+     ("Windows protected your PC"): klõpsake  "Rohkem teavet"
+     ("More info") ja seejärel  "Käivita ikkagi" ("Run anyway").
+
+   - Kui Windows küsib "Kas lubate sellel rakendusel teie seadmes
+     muudatusi teha?": klõpsake  "Jah".
+     (Ehitamine installib kaks tasuta abiprogrammi, mida see vajab:
+     Python ja Inno Setup.)
+
+6. Avaneb must aken, milles jookseb palju teksti.
+   See on normaalne. Ärge akent sulgege. Lihtsalt oodake.
+
+   Esimesel korral kestab see umbes 5 kuni 15 minutit, sest kõik
+   vajalik laaditakse internetist alla.
+
+7. Kui aknas on sõna  "Done"  (valmis), vajutage suvalist klahvi.
+   Aken sulgub.
+
+8. Minge tagasi kausta  clone-ranger . Seal on nüüd uus kaust
+   dist-windows . Avage see. Seest leiate:
+
+     CloneRanger-1.1.0-Setup.exe      <-- see on teie installiprogramm
+
+   Selle ühe faili saate kopeerida USB-mälupulgale ja installida
+   Clone Rangeri ka igasse teise Windows 10 / 11 arvutisse.
+   Nendes arvutites ei pea te 1. ja 2. osa kordama.
+
+
+3. OSA: INSTALLIGE CLONE RANGER
+-------------------------------
+
+9. Topeltklõpsake  CloneRanger-1.1.0-Setup.exe
+
+10. Windows näitab tõenäoliselt sinist akent
+    "Windows kaitses teie arvutit".
+    See juhtub, sest Clone Ranger on eraisiku tasuta rakendus,
+    mitte suure ettevõtte oma. See on ohutu.
+    Klõpsake  "Rohkem teavet" ja seejärel  "Käivita ikkagi".
+
+    Administraatori parooli EI ole vaja.
+
+11. Avaneb installiprogramm (inglise keeles). Läbige see:
+      - Litsentsi leht:    valige "I accept the agreement"
+                           (nõustun), klõpsake "Next" (edasi)
+      - Kausta leht:       ärge midagi muutke, klõpsake "Next"
+      - Töölaua ikoon:     märkige ruut, kui soovite ikooni
+                           töölauale, klõpsake "Next"
+      - Klõpsake  "Install"  (installi)
+      - Klõpsake  "Finish"   (lõpeta) - Clone Ranger käivitub kohe
+
+12. Edaspidi käivitage Clone Ranger menüüst Start:
+    klõpsake Start ja tippige  Clone Ranger .
+
+Zip-faili ja lahtipakitud kausta võite nüüd soovi korral kustutada.
+Hoidke Setup.exe alles, kui soovite seda hiljem teistesse
+arvutitesse installida.
+
+
+KUI MIDAGI LÄHEB VALESTI
+------------------------
+
+Must aken näitab punaselt "FAILED" (ebaõnnestus):
+  - Tavaliselt katkes internetiühendus. Topeltklõpsake uuesti
+    build-no-tests.bat. See jätkab sealt, kus pooleli jäi.
+  - "could not download FFmpeg": see veebileht on ülekoormatud.
+    Oodake tund aega ja proovige uuesti.
+  - Midagi muud: pildistage must aken telefoniga
+    (või vajutage Windowsi klahv + Shift + S, et teha kuvatõmmis)
+    ja saatke see inimesele, kes teile Clone Rangeri andis.
+
+Must aken näitab kohe viga (nt et ei leia faili "build.ps1"):
+  - Tõenäoliselt olete endiselt zip-faili sees. Minge tagasi
+    1. osa juurde ja kasutage "Ekstrakti kõik".
+
+Kaustas dist-windows ei ole faili Setup.exe:
+  - Ehitamine ei lõppenud. Käivitage uuesti build-no-tests.bat ja
+    otsige tekstist "FAILED".
+  - Kui näete ainult  CloneRanger-1.1.0-portable.zip : ka see töötab.
+    Pakkige see lahti ("Ekstrakti kõik") ja topeltklõpsake
+    "Clone Ranger.exe". Installida pole vaja.
+
+
+KUIDAS CLONE RANGER HILJEM EEMALDADA
+------------------------------------
+
+Start -> Sätted -> Rakendused -> Installitud rakendused ->
+Clone Ranger -> kolm punkti (...) -> Desinstalli.
+Teie fotosid ja videoid ei kustutata kunagi.
